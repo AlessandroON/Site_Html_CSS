@@ -29,34 +29,27 @@ body {
     gap: 30px; /* Espaçamento entre os cards de pizza */
 }
 
-.dish-card {
+.imagem {
     background-color: #FFA500; /* Fundo do card igual ao do body, para que o texto pareça estar flutuando */
     padding: 20px;
     text-align: center;
     border-radius: 8px; /* Bordas levemente arredondadas, embora não visíveis na imagem, é uma boa prática */
 }
 
-.dish-card img {
+.imagem img {
     width: 100%;
     max-width: 200px; /* Tamanho da imagem da pizza */
     margin-bottom: 15px;
     object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
-}
 
-.dish-card2 {
-   
-    max-width: 500px; /* Tamanho da imagem da pizza */
-   
-   
-}
 
-.dish-card h3 {
+.imagem h3 {
     font-size: 1.5em;
     color: #000; /* Cor do nome da pizza */
     margin-bottom: 10px;
 }
 
-.dish-card p {
+.imagem p {
     font-size: 0.9em;
     color: #000; /* Cor da descrição */
     line-height: 1.4;
@@ -64,7 +57,7 @@ body {
     min-height: 60px; /* Para manter os cards com altura similar na descrição */
 }
 
-.dish-card .price {
+.imagem .price {
     font-size: 1.1em;
     font-weight: bold;
     color: #000; /* Cor do preço */
@@ -93,10 +86,10 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 20px;
     }
-    .dish-card h3 {
+    .imagem h3 {
         font-size: 1.3em;
     }
-    .dish-card p {
+    .imagem p {
         font-size: 0.85em;
         min-height: 50px;
     }
@@ -110,7 +103,7 @@ body {
         grid-template-columns: 1fr; 
         gap: 20px;
     }
-     .dish-card p {
+     .imagem p {
         min-height: auto; 
     }
 }
