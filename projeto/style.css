@@ -1,12 +1,12 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif; /* Fonte similar à da imagem */
-    background-color: #FFA500; /* Cor de fundo laranja principal */
-    color: #000; /* Cor do texto padrão (preto) */
+    font-family: Arial, sans-serif;
+    background-color: #FFA500;
+    color: #000; 
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Para centralizar o conteúdo na tela */
+    min-height: 100vh; 
     padding: 20px;
     box-sizing: border-box;
 }
@@ -14,69 +14,69 @@ body {
 .especialdia {
     text-align: center;
     width: 100%;
-    max-width: 1200px; /* Define uma largura máxima para o conteúdo */
+    max-width: 1200px; 
 }
 
 .especialdia h2 {
-    font-size: 2.5em; /* Tamanho do título principal */
-    color: #000; /* Cor do título principal (preto) */
+    font-size: 2.5em;
+    color: #000; 
     margin-bottom: 40px;
 }
 
 .dishes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Layout responsivo */
-    gap: 30px; /* Espaçamento entre os cards de pizza */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; 
 }
 
 .imagem {
-    background-color: #FFA500; /* Fundo do card igual ao do body, para que o texto pareça estar flutuando */
+    background-color: #FFA500; 
     padding: 20px;
     text-align: center;
-    border-radius: 8px; /* Bordas levemente arredondadas, embora não visíveis na imagem, é uma boa prática */
+    border-radius: 8px; 
 }
 
 .imagem img {
     width: 100%;
-    max-width: 200px; /* Tamanho da imagem da pizza */
+    max-width: 200px; 
     margin-bottom: 15px;
-    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    object-fit: cover;
 
 
 .imagem h3 {
     font-size: 1.5em;
-    color: #000; /* Cor do nome da pizza */
+    color: #000; 
     margin-bottom: 10px;
 }
 
 .imagem p {
     font-size: 0.9em;
-    color: #000; /* Cor da descrição */
+    color: #000;
     line-height: 1.4;
     margin-bottom: 10px;
-    min-height: 60px; /* Para manter os cards com altura similar na descrição */
+    min-height: 60px; 
 }
 
 .imagem .price {
     font-size: 1.1em;
     font-weight: bold;
-    color: #000; /* Cor do preço */
+    color: #000; 
     margin-bottom: 20px;
 }
 
 .order-button {
     display: inline-block;
-    background-color: #FFFFFF; /* Fundo do botão (branco) */
-    color: #000000; /* Texto do botão (preto) */
+    background-color: #FFFFFF;
+    color: #000000; 
     padding: 12px 25px;
     text-decoration: none;
-    border-radius: 20px; /* Bordas arredondadas para o botão */
+    border-radius: 20px;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .order-button:hover {
-    background-color: #f0f0f0; /* Leve mudança de cor ao passar o mouse */
+    background-color: #f0f0f0;
 
  
     .especialdia h2 {
