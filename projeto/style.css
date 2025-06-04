@@ -45,7 +45,6 @@ body {
 .texto img {
     width: 100%;
     max-width: 200px; 
-  
     object-fit: cover; 
 }
 .texto h3 {
