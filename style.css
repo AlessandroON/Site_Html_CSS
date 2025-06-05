@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  background-color: #fff;
+}
+
+.texto-esquerda {
+  max-width: 50%;
+}
+
+.logo-a{
+  font-size: 18px;
+  color: #FFBB00;
+  margin-bottom: 20px;
+  font-family: 'Limelight', sans-serif;
+}
+
+.logo-b{
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-family: 'Mina' , sans-serif;
+}
+
+.logo-a, .logo-b{
+     display: inline-block;
+}
+
+h1 {
+  font-size: 36px;
+  color: #000000;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+p {
+  font-size: 16px;
+  color: #4A4A4A;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.botoes {
+  margin-top: 20px;
+}
+
+button {
+  padding: 12px 24px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.menu-btn {
+  background-color: #FFB800;
+  color: #000;
+}
+
+.order-btn {
+  background-color: #FFB800;
+  color: #000;
+}
+
+.imagem-direita img {
+  max-width: 400px;
+  height: auto;
+}
