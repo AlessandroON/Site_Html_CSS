@@ -20,7 +20,7 @@ body {
   border-radius: 10px;
   padding: 20px;
   overflow: auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 /* Distribuição dos blocos conforme a matriz desejada */
@@ -37,73 +37,75 @@ body {
 
 #pagina1 .hero {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 60px 80px;
   background-color: #fff;
 }
 
 #pagina1 .texto-esquerda {
-  max-width: 100%;
-  text-align: center;
+  max-width: 50%;
 }
 
 #pagina1 .logo-a {
   font-size: 18px;
   color: #FFBB00;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-family: 'Limelight', sans-serif;
 }
 
 #pagina1 .logo-b {
   font-size: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-family: 'Mina', sans-serif;
 }
 
-#pagina1 .logo-a, 
+#pagina1 .logo-a,
 #pagina1 .logo-b {
   display: inline-block;
 }
 
 #pagina1 h1 {
-  font-size: 24px;
+  font-size: 36px;
   color: #000000;
   margin-bottom: 10px;
   font-family: 'Poppins', sans-serif;
 }
 
 #pagina1 p {
-  font-size: 14px;
-  color: #000000;
+  font-size: 16px;
+  color: #4A4A4A;
   line-height: 1.6;
   margin: 5px 0;
 }
 
 #pagina1 .botoes {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 #pagina1 button {
-  padding: 10px 18px;
-  margin: 5px;
+  padding: 12px 24px;
+  margin-right: 10px;
   border: none;
   border-radius: 30px;
   font-weight: bold;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 14px;
 }
 
-#pagina1 .menu-btn,
+#pagina1 .menu-btn {
+  background-color: #FFB800;
+  color: #000;
+}
+
 #pagina1 .order-btn {
   background-color: #FFB800;
   color: #000;
 }
 
 #pagina1 .imagem-direita img {
-  max-width: 200px;
+  max-width: 400px;
   height: auto;
-  margin-top: 15px;
 }
 
 #pagina2 {
@@ -113,7 +115,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; 
     padding: 20px;
     box-sizing: border-box;
 }
