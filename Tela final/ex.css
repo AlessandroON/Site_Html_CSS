@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    /* Impede rolagem no body, o layout vai preencher a tela */
+    overflow: hidden; 
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas de largura igual */
+    gap: 0; /* Remove o gap entre as colunas, pois as seções internas terão seu próprio padding */
+    height: 100vh; /* Ocupa a altura total da viewport */
+    width: 100vw; /* Ocupa a largura total da viewport */
+    box-sizing: border-box;
+    overflow: hidden; /* Garante que o main-layout não tenha barras de rolagem próprias */
+}
+
+/* Estilos gerais para as colunas para que seu conteúdo possa rolar individualmente se precisar */
+.coluna-esquerda,
+.coluna-direita {
+    display: flex;
+    flex-direction: column; /* Conteúdo empilhado verticalmente */
+    height: 100%; /* Ocupa a altura total da sua célula grid */
+    overflow-y: auto; /* Permite rolagem vertical APENAS se o conteúdo exceder a altura da coluna */
+    background-color: #fff; /* Fundo padrão branco, pode ser sobrescrito */
+}
+
+/* Estilos para as seções dentro das colunas */
+.secao-superior-esquerda {
+    background-color: #fff;
+    padding: 60px 80px; /* Padding interno como na imagem de referência */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50vh; /* Garante que ocupe pelo menos metade da altura da coluna */
+}
+
+.secao-inferior-esquerda {
+    background-color: #FFAE00;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 50vh; /* Garante que ocupe pelo menos metade da altura da coluna */
+}
+
+.secao-superior-direita {
+    background-color: #fff;
+    padding: 60px 80px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 50vh; /* Garante que ocupe pelo menos metade da altura da coluna */
+}
+
+.secao-inferior-direita {
+    background-color: #fff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 50vh; /* Garante que ocupe pelo menos metade da altura da coluna */
+}
+
+/* Estilos da Seção Superior Esquerda (antiga Página 1) */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.texto-esquerda {
+    max-width: 50%;
+    text-align: left;
+}
+
+.logo-a {
+    font-size: 18px;
+    color: #FFBB00;
+    margin-bottom: 20px;
+    font-family: 'Limelight', sans-serif;
+}
+
+.logo-b {
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-family: 'Mina', sans-serif;
+}
+
+.logo-a, .logo-b {
+    display: inline-block;
+}
+
+.secao-superior-esquerda h1 {
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.secao-superior-esquerda p {
+    font-size: 16px;
+    color: #4A4A4A;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.botoes {
+    margin-top: 20px;
+}
+
+.botoes button {
+    padding: 12px 24px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.menu-btn, .order-btn {
+    background-color: #FFB800;
+    color: #000;
+}
+
+.imagem-direita img {
+    max-width: 400px;
+    height: auto;
+}
+
+/* Estilos da Seção Inferior Esquerda (antiga Página 2) */
+.secao-inferior-esquerda h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #000;
+    margin-top: 20px; 
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.divulgar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste o minmax para telas menores */
+    gap: 20px; 
+    width: 100%;
+    max-width: 1000px; /* Limita a largura para melhor visualização */
+}
+
+.item-prato {
+    background-color: #FFAE00;
+    text-align: center;
+    border-radius: 20px; /* Reduzido para ficar mais contido */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.item-prato img {
+    width: 100%;
+    max-width: 150px; /* Tamanho da imagem da pizza */
+    height: auto;
+    object-fit: cover; 
+    margin-bottom: 10px;
+}
+
+.item-prato h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 20px; 
+    color: #000000; 
+    margin-bottom: 5px;
+}
+
+.item-prato p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: #000; 
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.valor {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.botao-prato {
+    background-color: #FFFFFF;
+    color: #000000; 
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Estilos da Seção Superior Direita (antiga Página 3) */
+.secao-superior-direita h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.intro-text-restaurante {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+    color: #4A4A4A;
+    line-height: 1.6;
+}
+
+.imagem-massas {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px; /* Adicionado um pouco de borda para a imagem */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.ingredientes-fotos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.ingredientes-fotos img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #FFBB00; /* Borda ao redor dos ingredientes */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Estilos da Seção Inferior Direita (antiga Página 4) */
+.secao-inferior-direita h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.intro-text-customer {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Reduzido o gap para caber mais itens */
+    width: 100%;
+    max-width: 800px; /* Limita a largura dos depoimentos */
+}
+
+.testimonial-item {
+    flex: 1 1 250px; /* Ajusta para ser flexível e ter largura mínima */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.testimonial-item .image-placeholder {
+    width: 100px; /* Reduzido o tamanho para caber mais */
+    height: 100px; /* Reduzido o tamanho para caber mais */
+    background-color: #eee;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-size: 14px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #FFBB00; /* Borda similar aos ingredientes */
+}
+
+.testimonial-item .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stars {
+    font-size: 20px; /* Reduzido para ficar mais proporcional */
+    color: gold;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.testimonial-item h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.testimonial-item p {
+    font-size: 13px;
+    color: #000000;
+    line-height: 1.5;
+}
