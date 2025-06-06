@@ -1,323 +1,477 @@
+/* global.css */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9f9;
-    /* Impede rolagem no body, o layout vai preencher a tela */
-    overflow: hidden; 
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.main-layout {
+.grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Duas colunas de largura igual */
-    gap: 0; /* Remove o gap entre as colunas, pois as seções internas terão seu próprio padding */
-    height: 100vh; /* Ocupa a altura total da viewport */
-    width: 100vw; /* Ocupa a largura total da viewport */
-    box-sizing: border-box;
-    overflow: hidden; /* Garante que o main-layout não tenha barras de rolagem próprias */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: visible;
 }
 
-/* Estilos gerais para as colunas para que seu conteúdo possa rolar individualmente se precisar */
-.coluna-esquerda,
-.coluna-direita {
-    display: flex;
-    flex-direction: column; /* Conteúdo empilhado verticalmente */
-    height: 100%; /* Ocupa a altura total da sua célula grid */
-    overflow-y: auto; /* Permite rolagem vertical APENAS se o conteúdo exceder a altura da coluna */
-    background-color: #fff; /* Fundo padrão branco, pode ser sobrescrito */
-}
-
-/* Estilos para as seções dentro das colunas */
-.secao-superior-esquerda {
-    background-color: #fff;
-    padding: 60px 80px; /* Padding interno como na imagem de referência */
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 50vh; /* Garante que ocupe pelo menos metade da altura da coluna */
-}
-
-.secao-inferior-esquerda {
-    background-color: #FFAE00;
-    padding: 40px 20px;
-    box-sizing: border-box;
+.bloco {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    min-height: 50vh; /* Garante que ocupe pelo menos metade da altura da coluna */
+    min-width: 0;
+    min-height: 0;
 }
 
-.secao-superior-direita {
+#pagina1 { grid-column: 1; grid-row: 1; }
+#pagina2 { grid-column: 1; grid-row: 2; }
+#pagina3 { grid-column: 2; grid-row: 1; }
+#pagina4 { grid-column: 2; grid-row: 2; }
+
+#pagina1 {
+    font-family: 'Segoe UI', sans-serif;
     background-color: #fff;
-    padding: 60px 80px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 50vh; /* Garante que ocupe pelo menos metade da altura da coluna */
-}
-
-.secao-inferior-direita {
-    background-color: #fff;
-    padding: 40px 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 50vh; /* Garante que ocupe pelo menos metade da altura da coluna */
-}
-
-/* Estilos da Seção Superior Esquerda (antiga Página 1) */
-.hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.texto-esquerda {
-    max-width: 50%;
+    padding: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
     text-align: left;
 }
 
-.logo-a {
-    font-size: 18px;
+#pagina1 .hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 4rem;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#pagina1 .texto-esquerda {
+    flex: 1 1 50%;
+    max-width: 50%;
+    text-align: left;
+    padding-right: 1.5rem;
+    padding: 1rem;
+}
+
+#pagina1 .logo-a {
+    font-size: 1.5rem;
     color: #FFBB00;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     font-family: 'Limelight', sans-serif;
 }
 
-.logo-b {
-    font-size: 15px;
-    margin-bottom: 20px;
+#pagina1 .logo-b {
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
     font-family: 'Mina', sans-serif;
 }
 
-.logo-a, .logo-b {
+#pagina1 .logo-a,
+#pagina1 .logo-b {
     display: inline-block;
 }
 
-.secao-superior-esquerda h1 {
-    font-size: 36px;
+#pagina1 h1 {
+    font-size: 2.5rem;
     color: #000000;
-    margin-bottom: 10px;
+    margin-bottom: 0.8rem;
     font-family: 'Poppins', sans-serif;
+    word-break: break-word;
+    hyphens: auto;
 }
 
-.secao-superior-esquerda p {
-    font-size: 16px;
+#pagina1 p {
+    font-size: 1rem;
     color: #4A4A4A;
     line-height: 1.6;
-    margin: 5px 0;
+    margin: 0.3rem 0;
 }
 
-.botoes {
-    margin-top: 20px;
+#pagina1 .botoes {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
 }
 
-.botoes button {
-    padding: 12px 24px;
-    margin-right: 10px;
+#pagina1 button {
+    padding: 0.8rem 1.5rem;
+    margin-right: 0;
     border: none;
     border-radius: 30px;
     font-weight: bold;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 0.9rem;
+    flex-shrink: 1;
+    white-space: nowrap;
+    min-width: 100px;
+    max-width: 150px;
 }
 
-.menu-btn, .order-btn {
+#pagina1 .menu-btn {
     background-color: #FFB800;
     color: #000;
 }
 
-.imagem-direita img {
-    max-width: 400px;
-    height: auto;
-}
-
-/* Estilos da Seção Inferior Esquerda (antiga Página 2) */
-.secao-inferior-esquerda h2 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
+#pagina1 .order-btn {
+    background-color: #FFB800;
     color: #000;
-    margin-top: 20px; 
-    margin-bottom: 30px;
-    line-height: 1.5;
 }
 
-.divulgar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste o minmax para telas menores */
-    gap: 20px; 
-    width: 100%;
-    max-width: 1000px; /* Limita a largura para melhor visualização */
+#pagina1 .imagem-direita {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    min-width: 0;
 }
 
-.item-prato {
-    background-color: #FFAE00;
-    text-align: center;
-    border-radius: 20px; /* Reduzido para ficar mais contido */
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.item-prato img {
-    width: 100%;
-    max-width: 150px; /* Tamanho da imagem da pizza */
+#pagina1 .imagem-direita img {
+    max-width: 100%;
     height: auto;
-    object-fit: cover; 
-    margin-bottom: 10px;
+    display: block;
+    object-fit: contain;
+    min-width: 0;
 }
 
-.item-prato h3 {
+#pagina2 {
     font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    font-size: 20px; 
-    color: #000000; 
-    margin-bottom: 5px;
+    background-color: #FFAE00;
+    color: #000;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.item-prato p {
+#pagina2 .especialdia {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    color: #000; 
-    margin-bottom: 10px;
-    font-size: 13px;
-    line-height: 1.4;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.valor {
-    font-family: "Poppins", sans-serif;
+#pagina2 .especialdia h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+#pagina2 .divulgar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+#pagina2 .texto {
+    background-color: #FFAE00;
+    text-align: center;
+    border-radius: 50px;
+    padding: 1rem;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+#pagina2 .texto img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    min-width: 0;
+}
+#pagina2 .texto h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 0.8rem;
+}
+
+#pagina2 .texto p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+#pagina2 .valor {
+    font-size: 1.1rem;
     font-weight: 600;
     color: #000;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-.botao-prato {
+#pagina2 .botao {
     background-color: #FFFFFF;
-    color: #000000; 
-    padding: 10px 20px;
+    color: #000000;
+    padding: 0.7rem 1.5rem;
     text-decoration: none;
     border-radius: 20px;
     display: inline-block;
-    margin-top: 10px;
-    font-size: 13px;
-    font-weight: 500;
+    margin-top: 0.8rem;
 }
 
-/* Estilos da Seção Superior Direita (antiga Página 3) */
-.secao-superior-direita h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
+#pagina3 {
+    background-color: #fff;
     color: #000;
+    text-align: center;
+    padding: 1.5rem;
+    box-sizing: border-box;
 }
 
-.intro-text-restaurante {
-    max-width: 600px;
-    margin: 0 auto 30px;
-    font-size: 16px;
-    color: #4A4A4A;
+#pagina3 h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+#pagina3 p {
+    font-size: 1rem;
     line-height: 1.6;
+    margin-bottom: 1.25rem;
 }
 
-.imagem-massas {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 10px; /* Adicionado um pouco de borda para a imagem */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.ingredientes-fotos {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.ingredientes-fotos img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #FFBB00; /* Borda ao redor dos ingredientes */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Estilos da Seção Inferior Direita (antiga Página 4) */
-.secao-inferior-direita h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
+#pagina4 {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 0;
+    text-align: center;
     color: #000;
+    display: flex;
+    flex-direction: column;
 }
 
-.intro-text-customer {
+#pagina4 .testimonial-section {
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+#pagina4 h2 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+#pagina4 .intro-text {
     max-width: 700px;
-    margin: 0 auto 50px;
-    font-size: 14px;
+    margin: 0 auto 2.5rem;
+    font-size: 1rem;
     color: #000000;
 }
 
-.testimonials {
+#pagina4 .testimonials {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px; /* Reduzido o gap para caber mais itens */
+    gap: 2rem;
     width: 100%;
-    max-width: 800px; /* Limita a largura dos depoimentos */
 }
 
-.testimonial-item {
-    flex: 1 1 250px; /* Ajusta para ser flexível e ter largura mínima */
-    background-color: #fff;
-    padding: 20px;
+#pagina4 .testimonial {
+    flex: 1 1 250px;
+    max-width: 300px;
+    padding: 1rem;
+    background-color: #f0f0f0;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    text-align: center;
+    min-width: 0;
 }
 
-.testimonial-item .image-placeholder {
-    width: 100px; /* Reduzido o tamanho para caber mais */
-    height: 100px; /* Reduzido o tamanho para caber mais */
-    background-color: #eee;
-    margin: 0 auto 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000000;
-    font-size: 14px;
+#pagina4 .image-placeholder {
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto 1rem;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #FFBB00; /* Borda similar aos ingredientes */
+    min-width: 0;
+    min-height: 0;
 }
 
-.testimonial-item .image-placeholder img {
+#pagina4 .image-placeholder img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    min-width: 0;
+    min-height: 0;
 }
 
-.stars {
-    font-size: 20px; /* Reduzido para ficar mais proporcional */
+#pagina4 .stars {
+    font-size: 1.5rem;
     color: gold;
     line-height: 1;
-    margin-bottom: 5px;
+    outline: none;
+    border: none;
+    text-shadow: none;
+    margin-bottom: 0.5rem;
 }
 
-.testimonial-item h3 {
-    margin: 10px 0 5px;
-    font-size: 16px;
+#pagina4 .testimonial h3 {
+    margin: 0.8rem 0 0.4rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
-.testimonial-item p {
-    font-size: 13px;
+#pagina4 .testimonial p {
+    font-size: 0.9rem;
     color: #000000;
-    line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .bloco {
+        padding: 15px;
+    }
+
+    #pagina1 .hero {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    #pagina1 .texto-esquerda {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 1.5rem;
+        min-width: unset;
+    }
+
+    #pagina1 .imagem-direita {
+        max-width: 80%;
+    }
+
+    #pagina1 h1 {
+        font-size: 2rem;
+    }
+
+    #pagina1 .botoes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    #pagina1 button {
+        width: 100%;
+        max-width: 200px;
+        min-width: unset;
+    }
+
+    #pagina2 .divulgar {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+
+    #pagina4 .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #pagina4 .testimonial {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    #pagina1 .hero {
+        padding: 1.5rem;
+    }
+
+    #pagina1 h1 {
+        font-size: 1.8rem;
+    }
+
+    #pagina1 p {
+        font-size: 0.9rem;
+    }
+
+    #pagina2 .especialdia h2,
+    #pagina4 h2 {
+        font-size: 1.8rem;
+    }
+
+    #pagina2 .divulgar {
+        grid-template-columns: 1fr;
+    }
+
+    #pagina4 .intro-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    #pagina1 .hero {
+        padding: 1rem;
+    }
+
+    #pagina1 h1 {
+        font-size: 1.5rem;
+    }
+
+    #pagina1 p {
+        font-size: 0.8rem;
+    }
+
+    #pagina1 button {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    #pagina2 .especialdia h2,
+    #pagina4 h2 {
+        font-size: 1.5rem;
+    }
+
+    #pagina3 h2 {
+        font-size: 1.5rem;
+    }
+    #pagina3 p {
+        font-size: 0.9rem;
+    }
 }
