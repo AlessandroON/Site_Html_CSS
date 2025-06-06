@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.bloco {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  overflow: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Distribuição dos blocos conforme a matriz desejada */
+#pagina1 { grid-column: 1; grid-row: 1; }
+#pagina2 { grid-column: 1; grid-row: 2; }
+#pagina3 { grid-column: 2; grid-row: 1; }
+#pagina4 { grid-column: 2; grid-row: 2; }
+
+
+#pagina1 {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+#pagina1 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+#pagina1 .texto-esquerda {
+  max-width: 100%;
+  text-align: center;
+}
+
+#pagina1 .logo-a {
+  font-size: 18px;
+  color: #FFBB00;
+  margin-bottom: 10px;
+  font-family: 'Limelight', sans-serif;
+}
+
+#pagina1 .logo-b {
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-family: 'Mina', sans-serif;
+}
+
+#pagina1 .logo-a, 
+#pagina1 .logo-b {
+  display: inline-block;
+}
+
+#pagina1 h1 {
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#pagina1 p {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+#pagina1 .botoes {
+  margin-top: 15px;
+}
+
+#pagina1 button {
+  padding: 10px 18px;
+  margin: 5px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+#pagina1 .menu-btn,
+#pagina1 .order-btn {
+  background-color: #FFB800;
+  color: #000;
+}
+
+#pagina1 .imagem-direita img {
+  max-width: 200px;
+  height: auto;
+  margin-top: 15px;
+}
+
+#pagina2 {
+    font-family:  "Poppins", sans-serif; 
+    background-color: #FFAE00;
+    color: #000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#pagina2 .especialdia {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    width: 500%;
+    max-width: 1200px; 
+}
+
+#pagina2 .especialdia h2 {
+    
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #000;
+    margin-top: auto; 
+    margin-bottom: auto;
+    line-height: 15;
+   
+}
+
+
+#pagina2 .divulgar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; 
+}
+
+#pagina2 .texto {
+    background-color: #FFAE00;
+    text-align: center;
+    border-radius: 80px; 
+}
+
+#pagina2 .texto img {
+    width: 100%;
+    max-width: 200px; 
+    object-fit: cover; 
+}
+#pagina2 .texto h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 4000;
+    font-size: 30px; 
+    color: #000000; 
+    text-align: center;
+    
+}
+
+#pagina2 .texto p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: #000; 
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+#pagina2 .texto  {
+    font-family: "Poppins", sans-serif;
+    color: #000; 
+    margin-bottom: 40px;
+}
+
+#pagina2 .valor {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+#pagina2 .botao {
+   
+    background-color: #FFFFFF;
+    color: #000000; 
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 20px;
+   
+  
+}
+
+#pagina4  {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #000;
+}
+
+#pagina4 .testimonial-section {
+  padding: 50px 20px;
+}
+
+#pagina4 h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+#pagina4 .intro-text {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 14px;
+  color: #000000;
+}
+
+#pagina4 .testimonials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+#pagina4 .testimonial {
+  max-width: 250px;
+}
+
+#pagina4 .image-placeholder {
+  width: 150px;
+  height: 200px;
+  background-color: #ffffff;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+#pagina4 .stars {
+  font-size: 24px;
+  color: gold;
+  line-height: 1;
+  outline: none;
+  border: none;
+  text-shadow: none;
+}
+
+
+
+
+#pagina4 .testimonial h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#pagina4 .testimonial p {
+  font-size: 13px;
+  color: #000000;
+}
+
+
