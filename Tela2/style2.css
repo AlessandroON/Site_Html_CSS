@@ -23,8 +23,9 @@ body {
     
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    color: #000; 
-    margin-bottom: 20.59px 33.46px;
+    color: #000;
+    margin-top: auto; 
+    margin-bottom: auto;
     line-height: 15;
    
 }
