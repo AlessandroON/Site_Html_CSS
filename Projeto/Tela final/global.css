@@ -403,12 +403,18 @@ body {
 }
 
 #pagina4 .testimonial p {
-    font-size: 0.9rem;
     color: #000000;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 9.84px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+  
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
     .grid-container { 
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -417,52 +423,6 @@ body {
 
     .bloco { 
         padding: 15px;
-    }
-
-    #pagina1 .hero { 
-        flex-direction: column;
-        padding: 2rem;
-    }
-
-    #pagina1 .texto-esquerda { 
-        max-width: 100%;
-        padding-right: 0;
-        margin-bottom: 1.5rem;
-        min-width: unset;
-    }
-
-    #pagina1 .imagem-direita { 
-        max-width: 80%;
-    }
-
-    #pagina1 h1 { 
-        font-size: 2rem;
-    }
-
-    #pagina1 .botoes { 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-    }
-
-    #pagina1 button { 
-        width: 100%;
-        max-width: 200px;
-        min-width: unset;
-    }
-
-    #pagina2 .divulgar { 
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    }
-
-    #pagina4 .testimonials { 
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #pagina4 .testimonial { 
-        max-width: 90%;
     }
 
     
@@ -510,97 +470,4 @@ body {
         align-items: flex-start;
         padding: 3rem 4rem;
     }
-}
-
-@media (max-width: 768px) {
-    .grid-container { 
-        gap: 15px;
-        padding: 15px;
-    }
-
-    #pagina1 .hero { 
-        padding: 1.5rem;
-    }
-
-    #pagina1 h1 { 
-        font-size: 1.8rem;
-    }
-
-    #pagina1 p { 
-        font-size: 0.9rem;
-    }
-
-    #pagina2 .especialdia h2,
-    #pagina4 h2 { 
-        font-size: 1.8rem;
-    }
-
-    #pagina2 .divulgar { 
-        grid-template-columns: 1fr;
-    }
-
-    #pagina4 .intro-text { 
-        font-size: 0.9rem;
-    }
-
-
-    #pagina3 .Welcome {
-        padding: 1.5rem 1rem;
-        gap: 0.8rem;
-    }
-    #pagina3 .Welcome h1 {
-        font-size: 1.5rem;
-    }
-    #pagina3 .Welcome .text p {
-        font-size: 0.9rem;
-    }
-    #pagina3 .Welcome .text img[src*="28"] {
-        max-width: 12.5rem;
-    }
-    
-}
-
-@media (max-width: 480px) {
-    .grid-container {
-        padding: 10px;
-        gap: 10px;
-    }
-
-    #pagina1 .hero { 
-        padding: 1rem;
-    }
-
-    #pagina1 h1 { 
-        font-size: 1.5rem;
-    }
-
-    #pagina1 p { 
-        font-size: 0.8rem;
-    }
-
-    #pagina1 button { 
-        padding: 0.6rem 1rem;
-        font-size: 0.8rem;
-    }
-
-    #pagina2 .especialdia h2,
-    #pagina4 h2 { 
-        font-size: 1.5rem;
-    }
-
-   
-    #pagina3 .Welcome {
-        padding: 1rem 0.5rem;
-        gap: 0.5rem;
-    }
-    #pagina3 .Welcome h1 {
-        font-size: 1.3rem;
-    }
-    #pagina3 .Welcome .text p {
-        font-size: 0.8rem;
-    }
-    #pagina3 .Welcome .text img[src*="28"] {
-        max-width: 9.375rem;
-    }
-    
 }
